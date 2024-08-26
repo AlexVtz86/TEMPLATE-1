@@ -1,0 +1,125 @@
+
+     * {
+        text-align: center;
+        box-sizing: border-box;
+     }
+
+    body {
+      font-family: Arial, sans-serif;
+      /* position: relative;
+      top: 50px; */
+      background-color: lightgray;
+      padding: 20px;
+      margin-top: 55px; 
+    }
+
+    #my-list{
+      font-size: 20px;
+    }
+
+    .my-menu {
+      background-color: aquamarine;
+      padding: 10px;
+      font-size: 20px;    
+    }
+
+    #dashboard {
+      /* max-width: 600px; */
+      /* margin: 20px auto; */
+      /* padding: 20px; */
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #70c17f;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-evenly;
+      align-items: flex-start;
+      
+    }
+
+    .search-form {
+      position: absolute;
+      top: 50px;
+      left: 44%;
+    }
+
+    .main-wrapper {
+    display: flex;
+    flex-direction: inherit;
+    position: relative;
+    top: 100px;
+    left: 100px;
+    width: 35%;
+    justify-content: space-between;
+
+    }
+    
+    p {
+      text-align: center;
+    }
+
+    .main {
+      position: absolute;
+      top: 0px;
+      right: 500px;;
+      left: 500px;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    #select {
+      border: none;
+      position: relative;
+      top: 100px;
+    
+    }
+
+    .lead-list {
+      display: flex;
+      flex-direction: column;
+      /* border: 1px solid #ccc; */
+      border: 2px solid;
+      border-radius: 5px;
+    }
+
+    .source-list  {
+    position: relative;
+    right: 255px;
+    top: 35px;
+
+    }
+
+    .status {
+      margin-top: 20px;
+      border: 1px solid #ccc;
+      
+    }
+    
+    .status:hover {
+      background-color: red;
+    }
+    
+    /* .subnavbtn {
+      position: absolute;
+      z-index: 1;
+      width: 100%;
+      background-color: white;
+      display: none;
+    } */
+    
+    /* .subnavbtn .nav-btn:hover {
+      background-color: #f1f1f1;
+      display: block;
+    } */
+
+    /* CSS to hide child elements by default */
+   #crmStatus > .subnavbtn {
+    display: none;
+    } 
+
+  /* CSS to show child elements on hover */
+  #crmStatus:hover > .subnavbtn {
+  display: block;
+  }

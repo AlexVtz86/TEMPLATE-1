@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lead Dashboard Demo</title>
+  <link rel="stylesheet" href="yarokStyle.css">
+  <!-- <script src="Yarokale.js"></script> -->
+</head>
+<body>
+
+<div id="dashboard">
+  <bdo dir="rtl">
+    <h2 class="main">מעקב לידים</h2>
+  </bdo>
+
+  <form class="search-form">
+    <label for="searchInput"></label>
+    <input type="search" id="searchInput">
+    <button type="submit">חיפוש</button>
+    <button type="button" id="addNewLead">הוספה</button>
+    <button type="button" id="deleteSelectedLeads">מחיקה </button>
+    <button type="button" id="updateDashboard">עדכון</button>
+  </form>
+
+  <!-- <div id="sort-by">
+    <label for="sortSelect">מיון על פי</label>
+    <select class="my-menu" id="sortSelect">
+      <option value="date">תאריך</option>
+      <option value="name">שם</option>
+      <option value="phone">טלפון</option>
+      <option value="email">אימייל</option>
+      <option value="medication"> נוטל תרופות בחצי שנה האחרונה</option>
+      <option value="address">סובל מכאבים כרוניים</option>
+      <option value="status">קופת  חולים</option>
+      <option value="source">מקור הליד</option>
+    </select>
+  </div> -->
+<div class="navbar">
+  
+</div>
+<div>
+<h2 id="select">: מיין על פי</h2>
+</div> 
+ <div class="lead-list">
+    <input type="checkbox" id="nameSelect">
+    <label for="nameSelect">שם</label>
+    <input type="checkbox" id="nameSelect2">
+    <label for="nameSelect2">תאריך</label>
+    <input type="checkbox" id="nameSelect3">
+    <label for="nameSelect3">טלפון</label>
+    <input type="checkbox" id="nameSelect4">
+    <label for="nameSelect4">אימייל</label>
+    <input type="checkbox" id="nameSelect5">
+    <label for="nameSelect5">נוטל תרופות בחצי שנה האחרונה</label>
+    <input type="checkbox" id="nameSelect6">
+    <label for="nameSelect6">סובל מכאבים כרוניים</label>
+    <input type="checkbox" id="nameSelect7">
+    <label for="nameSelect7">קופת חולים</label>
+  </div>
+  
+
+  <div class="source-list">
+   <bdo dir="rtl">
+    <label id="my-list" for="sourceSelect">מקור</label>
+    <select class="my-menu" id="sourceSelect">
+      <option value="facebook">פייסבוק</option>
+      <option value="google">גוגל</option>
+      <option value="twitter">טוויטר</option>
+      <option value="instagram">אינסטגרם</option>
+      <option value="website">אתר</option>
+    </select>
+  </bdo>  
+  </div>
+
+<div class="main-wrapper">
+  <div class="status">
+    <table>
+      <tr>
+     <bdo dir="rtl">
+      <p>לידים שהגיעו :<span id="leadCount"></span></p>
+    </bdo>
+      </tr>
+    </table>
+  </div>
+
+  <!-- CRM Status -->
+  <div class="status">
+    <bdo dir="rtl">
+       <p>  <span id="crmStatus"> crmסטטוס ב  </span></p>
+       <div class="subnavbtn">
+         <a href="#">פעיל</a>
+         <a href="#">לא פעיל</a>
+        </ul>
+       </div>
+    </bdo>
+  </div>
+
+  <!-- Approval Status -->
+  <div class="status">
+    <bdo dir="rtl">
+         <p>לידים שנסגרו  <span id="approvedLeads"> </span></p>
+    </bdo>
+  </div>
+
+  <!-- Financial Overview -->
+  <div class="status">
+    <bdo dir="rtl">
+      <p>סה״כ ש״ח מלידים שנסגרו<span id="totalMoney"></span></p>
+    </bdo>
+  </div>
+</div>
+<script>
+  
+
+  // the main functions for fetching data for the dashboard will come here 
+
+  // Simulated data (for testing purposes)
+  // const leadData = {
+  //   facebook: {
+  //     leadCount: 30,
+  //     crmStatus: "חדש",
+  //     approvedLeads: 15,
+  //     totalMoney: 7500,
+  //   },
+  //   google: {
+  //     leadCount: 20,
+  //     crmStatus: "חדש",
+  //     approvedLeads: 10,
+  //     totalMoney: 5000,
+  //   },
+  //   twitter: {
+  //       leadCount: 10,
+  //       crmStatus: "חדש",
+  //       approvedLeads: 5,
+  //       totalMoney: 3000,
+  //   },
+  // };
+
+  // // Function to update the dashboard based on the selected lead source
+  // function updateDashboard(selectedSource) {
+  //   const data = leadData[selectedSource];
+  //   document.getElementById('leadCount').innerText = data.leadCount;
+  //   document.getElementById('crmStatus').innerText = data.crmStatus;
+  //   document.getElementById('approvedLeads').innerText = data.approvedLeads;
+  //   document.getElementById('totalMoney').innerText = data.totalMoney;
+  // }
+
+  // Event listener for the lead source selection
+  // document.getElementById('sourceSelect').addEventListener('change', function() {
+  //   const selectedSource = this.value;
+  //   updateDashboard(selectedSource);
+  // });
+
+  // const URL = ('api/Users/alex/alex-app-01/data/');
+
+  // async function fetchingSource() {
+  //   try {
+  //     const response = await fetch(URL);
+  //      console.log(response.ok); // check to see whetehr rsponse is ok or not 
+  //       const data = await response.json();
+  //       console.log(data.map(user => user.first_name));
+  //   } catch (e) {
+  //       console.error(e);
+  //   }
+  // }
+  // fetchingSource();
+</script>
+</body>
+</html> 
